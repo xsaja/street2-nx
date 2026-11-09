@@ -165,9 +165,13 @@ export function getLanguage() {
   return current;
 }
 
-// The saved choice, else English.
+// The saved choice, else the first of the browser's languages we have ("es-MX" -> "es"), else English.
 export function preferredLanguage(saved) {
-  return saved && TEXTS[saved] ? saved : 'en';
+  if (saved && TEXTS[saved]) {
+    return saved;
+  }
+  const wanted = (typeof navigator !== 'undefined' && navigator.languages) || [];
+  return wanted.map((l) => l.slice(0, 2).toLowerCase()).find((code) => TEXTS[code]) || 'en';
 }
 
 export function t(key, vars = {}) {
