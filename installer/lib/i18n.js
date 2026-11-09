@@ -15,6 +15,7 @@ const REPO = 'https://github.com/xsaja/street2-nx';
 const README_ES = `${REPO}#installation`;
 const README_EN = `${REPO}#installation`;
 const TGP = A('https://github.com/TGP482/XboxXBE-Recomp', 'XboxXBE-Recomp');
+const STREETNX = A('https://github.com/xsaja/street-nx', 'street-nx');
 const MVPNX = A('https://github.com/xsaja/mvp-nx', 'mvp-nx');
 const MVP05 = A('https://github.com/maddog847/MVP-Baseball-2005-XBERecomp', 'MVP05 XBE Recomp');
 const BLACKNX = A('https://github.com/gerisson1996/BLACK-NX-PORT', 'BLACK-NX-PORT');
@@ -83,7 +84,7 @@ const TEXTS = {
     sourceCode: 'Código fuente',
     installerSource: 'Código del instalador',
     credits:
-      `Port para Switch: xsaja, sobre su port de MVP Baseball 2005 (${MVPNX}), que parte de ${MVP05} de maddog847, el recompilador ${TGP} de TGP482 y la capa ` +
+      `Port para Switch: xsaja, sobre su port de FIFA Street (${STREETNX}), que a su vez parte de su port de MVP Baseball 2005 (${MVPNX}), que parte de ${MVP05} de maddog847, el recompilador ${TGP} de TGP482 y la capa ` +
       `de Switch de ${BLACKNX} (gerisson1996). Funciona con ${LIBNX}, ${DKP}, deko3d y NVK (${MESA}). Esta página está ` +
       `adaptada de ${DEFJAM} (R-drg), que a su vez viene de ${NFSMW} de StevensND.`,
     legal:
@@ -147,7 +148,7 @@ const TEXTS = {
     sourceCode: 'Source code',
     installerSource: 'Installer source',
     credits:
-      `Switch port by xsaja, built on xsaja's MVP Baseball 2005 port (${MVPNX}), which starts from maddog847's ${MVP05}, TGP482's ${TGP} recompiler and the Switch layer of ` +
+      `Switch port by xsaja, built on xsaja's FIFA Street port (${STREETNX}), itself built on xsaja's MVP Baseball 2005 port (${MVPNX}), which starts from maddog847's ${MVP05}, TGP482's ${TGP} recompiler and the Switch layer of ` +
       `${BLACKNX} (gerisson1996). Runs on ${LIBNX}, ${DKP}, deko3d and NVK (${MESA}). This page is adapted from ${DEFJAM} ` +
       `(R-drg), itself from ${NFSMW} by StevensND.`,
     legal:

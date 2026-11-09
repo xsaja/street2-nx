@@ -133,7 +133,7 @@ Settings DefaultSettings() {
     s.fps_cap = 60;
     s.vsync = true;
     s.xbox_720p = false;  // FIFA Street 2 was tested on the PC as a stock 480 Xbox (CreateDevice 640x480); 720p untested
-    s.aniso = 2;  // the ground and walls seen at an angle stay sharp further away; almost free on the GPU
+    s.aniso = 4;  // the ground and walls seen at an angle stay sharp further away
     gpu::g_draw_copy = true;  // the vertices copied as each draw is made: no per-draw wait (validated on the PC)
     gpu::g_track_state = true;  // the render thread compares only the render states and constants written
     gpu::g_reuse_constants = true;  // a draw with the previous draw's constants reuses their upload

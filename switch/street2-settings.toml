@@ -48,9 +48,9 @@ xbox_720p = false
 # or "en", "es", "fr", "de", "it", "pt", "ja", "ko", "zh" (the game itself may only have some of them).
 language = "auto"
 
-# Anisotropic filtering: 2 (default) keeps the ground sharp further away at almost no cost; 4, 8 or 16 sharper
-# still; 0 = only what the game asks for.
-anisotropic_filtering = 2
+# Anisotropic filtering: 4 (default) keeps the ground sharp further away; 8 or 16 sharper still, 2 is cheaper;
+# 0 = only what the game asks for.
+anisotropic_filtering = 4
 
 # A/B/X/Y: false (default) = by position, as on an Xbox controller: bottom B = Xbox A, right A = Xbox B,
 # left Y = Xbox X, top X = Xbox Y (the button the game shows sits where you press). true = by letter (A = Xbox A).

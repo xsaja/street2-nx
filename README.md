@@ -9,7 +9,7 @@
 
 The game's x86 code is translated to C++ and built as a native Switch program. A runtime stands in for the Xbox
 kernel, its Direct3D 8 (drawn with **deko3d**, the Switch's own graphics API, or with Vulkan/NVK) and its audio.
-street2-nx is built on **[mvp-nx](https://github.com/xsaja/mvp-nx)**, the MVP Baseball 2005 port, which starts from
+street2-nx is built on **[street-nx](https://github.com/xsaja/street-nx)**, the FIFA Street port, which is built on **[mvp-nx](https://github.com/xsaja/mvp-nx)**, the MVP Baseball 2005 port, which starts from
 TGP482's **[XboxXBE-Recomp](https://github.com/TGP482/XboxXBE-Recomp)**, maddog847's
 **[MVP05 XBE Recomp](https://github.com/maddog847/MVP-Baseball-2005-XBERecomp)** and the Switch layer of
 **[BLACK-NX-PORT](https://github.com/gerisson1996/BLACK-NX-PORT)**.
@@ -27,9 +27,6 @@ Tested on a Switch (Atmosphère, title mode), handheld (1280x720):
   Options, Radio Stations, Rule the Street, Skill Challenges
 - Matches at **60 fps**, with the Gamebreaker and the replays
 - The game's language follows the Switch's system language
-
-Not tested yet: docked (1920x1080) and the Switch's sleep and exit paths. Network play (System Link, Xbox Live) is not
-implemented: the game's code for it is there, but the runtime does not provide it.
 
 ## Installation
 
@@ -65,22 +62,13 @@ The first start compiles the deko3d shaders (a few seconds of black screen); the
 `street2-settings.toml` beside the NRO, commented. The ones a player may want:
 
 - `language`: `"auto"` (the Switch's) or a language code.
-- `anisotropic_filtering`: 2 by default; 4 or 8 sharpen the ground further.
+- `anisotropic_filtering`: 4 by default; 8 or 16 sharpen the ground further, 2 is cheaper.
 - `smaa`: SMAA anti-aliasing, off by default (it costs GPU time; docked it may drop frames).
 - `frame_pacing`: `"vsync"` by default (the screen paces the game); `"timer"` as older builds.
 - `renderer`: `"deko3d"` (default) or `"vulkan"`.
 - `cpu_mhz`, `gpu_mhz`, `mem_mhz`: 0 = the console's clocks. FIFA Street 2 does not need more.
 
 Logs go to `SD:/switch/street2-nx/logs/`.
-
-## Known limitations
-
-- The intro movies decode on the game's own CPU code: they run at about 50 fps, and each movie pauses for about 3 to
-  4 seconds when it opens.
-- Every game thread runs on one CPU core, as on the Xbox, so the game's start-up order holds. Heavy scenes may dip
-  below 60 fps on the handheld.
-- The Gamebreaker tints the screen red or blue. It is not yet confirmed that the original does the same.
-- Only the handheld has been tested.
 
 ## Building
 
@@ -105,9 +93,9 @@ The installer page is `installer/`, adapted from mvp-nx's (itself from defjam-sw
 ## Credits
 
 - **TGP482**: XboxXBE-Recomp, the recompiler and the runtime
-- **maddog847**: MVP05 XBE Recomp, whose SDK fixes mvp-nx and street2-nx carry
+- **maddog847**: MVP05 XBE Recomp, whose SDK fixes mvp-nx, street-nx and street2-nx carry
 - **gerisson1996**: BLACK-NX-PORT, the Switch layer
-- **xsaja**: mvp-nx and street2-nx
+- **xsaja**: mvp-nx, street-nx and street2-nx
 - **ChanseyIsTheBest**: the deko3d guide of sa2-nx, uam as a library, the Ryujinx fork used for testing
 - **fincs**: deko3d and uam; **danfromtico**, **NaGaa95**: mesa-switch and its 26.2.4 build
 - **R-drg**: defjam-sw, whose profiler the Switch profiler is adapted from
@@ -120,4 +108,4 @@ Every license is in `LICENSES.txt`.
 
 FIFA Street 2 is a trademark of Electronic Arts. This project has no relation to Electronic Arts, FIFA or Nintendo. It
 contains no game data; `street2.nro` contains code translated from the player's own `default.xbe`. The code of street2-nx
-is licensed under the GNU General Public License version 3 (`LICENSE`), as mvp-nx's is.
+is licensed under the GNU General Public License version 3 (`LICENSE`), as mvp-nx's and street-nx's are.
