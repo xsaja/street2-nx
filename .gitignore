@@ -40,3 +40,6 @@ CLAUDE.local.md
 *.stream
 *.gcda
 /%SystemDrive%/
+
+# local Claude Code project agents (kept on disk, not published)
+/.claude/
