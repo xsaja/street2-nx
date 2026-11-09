@@ -31,7 +31,7 @@ Tested on a Switch (Atmosphère, title mode), handheld (1280x720):
 ## Installation
 
 > [!TIP]
-> **Installer page: [xsaja.github.io/street2-nx](https://xsaja.github.io/street2-nx/)** (once it is published). Pick your
+> **Installer page: [xsaja.github.io/street2-nx](https://xsaja.github.io/street2-nx/)** Pick your
 > disc image or game folder, get `street2-nx.zip`, extract it into `sdmc:/switch/`. Everything runs in your browser: your
 > game files are never uploaded.
 
